@@ -1,23 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <style>
+        h1 { 
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+            font-size: 24px;
+            color: white;
+        }       
+    </style>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MY WEBsite</title>
     <link rel="stylesheet" href="mission2.css">
+    <title>The solar system</title>
 </head>
 <body>
-    <div class="hero">
     <nav>
-        <img src="images/spacelogo.png" class="spacelogo">
-        <img src="" class="">
         <ul>
-            <li><a href="">1</a></li>
-            <li><a href="">2</a></li>
-            <li><a href="">3</a></li>
-            <li><a href="">4</a></li>
+            <li><a href="Home.html">Home</a></li>
+            <li><a href="nasa.html">Planets</a></li>
+            <li><a href="about.html">About</a></li>
         </ul>
-        <button type="button">Click here</button>
     </nav>
-</body>
-</html>
+    
+    <div>
+        <h1>Explore our solar system</h1>
+        <br> 
+        <br> <br> <br> 
+    </div>
+
+    <div class="planets">
+        <input type="image" src="https://space-facts.com/wp-content/uploads/neptune-transparent.png">
+        <input type="image" src="https://www.pngplay.com/wp-content/uploads/13/Uranus-Transparent-File.png">
+        <input type="image" src="https://www.nicepng.com/png/full/331-3319031_saturn-and-rings-saturn-transparent-background.png">
+        <input type="image" src="https://pluspng.com/img-png/png-jupiter-jupiter-png-1368.png">
+        <input type="image" src="https://pngimg.com/uploads/mars_planet/mars_planet_PNG27.png">
+        <input type="image" src="https://purepng.com/public/uploads/large/purepng.com-earthearthplanetglobethird-planet-from-the-sun-1411526988004rc27u.png">
+        <input type="image" src="https://cdn-images-1.medium.com/v2/resize:fit:1200/1*y_T4zCs7Jy5JFMRmTyFzHA.png">
+        <input type="image" src="https://www.pngall.com/wp-content/uploads/2/Mercury-Planet.png">
+        <input type="image" src="https://pluspng.com/img-png/sun-png-transparent-background-bright-sun-2249.png">
+    </div>
+
+    
+    <div class="slideshow-container">
+        
+        <div class="mySlides">
+            <img src="https://space-facts.com/wp-content/uploads/neptune-transparent.png">
+        </div>
+        <div class="mySlides">
+            <img src="https://www.pngplay.com/wp-content/uploads/13/Uranus-Transparent-File.png">
+        </div>
+        <div class="mySlides">
+            <img src="https://www.nicepng.com/png/full/331-3319031_saturn-and-rings-saturn-transparent-background.png">
+        </div>
+        
+    </div>
+
+    
+    <button onclick="nextSlide()">Next Image</button>
+
+    
+    <script>
+        let slideIndex = 0;
+
+        function showSlide(n) {
+            const slides = document.querySelectorAll(".mySlides");
+            if (n >= slides.length) { slideIndex = 0; }    
+            if (n < 0) { slideIndex = slides.length - 1; }
+            for (let i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";  
+            }
+            slides[slideIndex].style.display = "block";  
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlide(slideIndex);
+        }
+
+        
+        showSlide(slideIndex);
+    </script>
+
+    <div class="column1">
+        <h3>Title</h3>
+        <p>Lorem ipsum dolor sit amet. Est adipisci quam qui voluptas fugit nam nulla iste. Ut voluptas ullam sed nulla dolor et culpa commodi eos rerum molestias ut Quis nihil. 
+            Et iste laudantium aut error voluptatum qui libero quis sit galisum dolores et quia laboriosam qui quia eaque est harum neque. Ut quisquam assumenda ad cupiditate modi qui totam 
+            aliquam vel laboriosam praesentium ad consequatur internos non nobis corporis. Ut incidunt autem id atque dolores ab similique Quis ut facere corrupti! Qui incidunt dolores 
+            At eaque officia quo quae iusto eum dolores nihil ut illum aliquid id consequatur odit. Nam Quis accusantium ut animi alias et enim optio. Et repellendus cumque hic 
+            sapiente repudiandae At impedit sequi non voluptas natus a minus recusandae id voluptas temporibus in voluptatem voluptatibus. Aut dolor mollitia quo maiores temporibus
+            aut perferendis molestias est voluptatem odio ut accusamus voluptas eum reiciendis voluptatibus. Cum dolorum repudiandae et nostrum minus a corrupti quis est molestias 
+            similique eos laborum unde. 
+        </p>
+
+        <br><br>
+        <h3>Short Quiz</h3>
+        <form">
+            <label for="Planetname">What is hottest planet in
+                our solar system?</label>
+            <input type="text" id="Planetname">
+        </form>
+
+        <br><br>
+
+        <label for="question">Which planet has the longest orbit in 
+            our solar system:</label>
+        <select name="question" id="question">
+           
